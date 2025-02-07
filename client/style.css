@@ -1,0 +1,12 @@
+#board {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative; /* To position post-its inside */
+  }.post-it {
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    position: absolute; /* To allow free movement */
+    cursor: move; /* Indicate draggable */
+  }
