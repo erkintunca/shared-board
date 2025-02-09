@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: shared-board-server
+    env: node
+    repo: https://github.com/erkintunca/shared-board
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: shared-board-db
+          property: connectionString
