@@ -10,7 +10,7 @@ app.use(cors());
 
 // Connect to MongoDB
 //mongoose.connect('mongodb://localhost:27017/shared-board', {
-mongoose.connect('52.41.36.82', {
+mongoose.connect('https://mongodb-ea49.onrender.com', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
