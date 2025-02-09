@@ -9,7 +9,8 @@ const port = 3000; // You can change this port if needed
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/shared-board', {
+//mongoose.connect('mongodb://localhost:27017/shared-board', {
+mongoose.connect('https://mongodb-ea49.onrender.com', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
