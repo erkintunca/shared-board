@@ -20,6 +20,7 @@ mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongo
   useUnifiedTopology: true,
 });
 
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
