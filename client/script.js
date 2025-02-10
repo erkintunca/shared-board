@@ -6,6 +6,10 @@ var API_URL = 'http://localhost:3000';
 try {API_URL = import.meta.env.API_URL;} catch (error) {console.warn('Assumed to run locally.', error);}
 console.log(API_URL);
 */
+
+const API_URL = process.env.API_URL;
+console.log(API_URL);
+
 async function fetchPostItNotes() {
   try {
     //const response = await fetch('http://localhost:3000/post-its'); // Fetch from your backend API
