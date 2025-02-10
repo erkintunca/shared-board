@@ -13,8 +13,8 @@ app.use(cors());
 //https://mongodb-ocus.onrender.com
 //erkintunca abg3kMQ8KliDMq49
 //mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/
-//mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/', {
-mongoose.connect('mongodb://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/', {
+mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/', {
+//mongoose.connect('mongodb://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/', {
 //mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
