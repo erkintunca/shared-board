@@ -7,6 +7,4 @@ services:
     startCommand: node index.js
     envVars:
       - key: MONGODB_URI
-        fromDatabase:
-          name: shared-board-db
-          property: connectionString
+        value: mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/
