@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 const app = express();
 app.use(express.json());
 const port = 3000; // You can change this port if needed
@@ -8,11 +10,13 @@ const port = 3000; // You can change this port if needed
 // Enable CORS for all origins (for development purposes)
 //app.use(cors());
 // Enable CORS for your frontend's origin
-app.use(cors({origin: 'https://shared-board-client.onrender.com',}));
+//app.use(cors({origin: 'https://shared-board-client.onrender.com',}));
+app.use(cors({origin: process.env.CORS_ORIGIN,}));
 
 // Connect to MongoDB
 //mongoose.connect('mongodb://localhost:27017/shared-board', {
-mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/shared-board', {
+//mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/shared-board', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
