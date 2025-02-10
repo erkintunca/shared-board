@@ -1,6 +1,9 @@
 const board = document.getElementById('board');
 const addPostItButton = document.getElementById('add-post-it'); // Select the button element
 
+const API_URL = '{{ API_URL }}';
+console.log(API_URL);
+
 console.log(typeof(process));
 if (typeof(process) === 'undefined') {process = {}; process.env = {}; process.env.API_URL = 'http://localhost:3000';}  // For local testing
 
