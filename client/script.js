@@ -4,7 +4,7 @@ const addPostItButton = document.getElementById('add-post-it'); // Select the bu
 var API_URL = 'http://localhost:3000';
 try {API_URL = import.meta.resolve("/");} catch (error) {console.warn('Assumed to run locally.', error);}
 //try {API_URL = import.meta.env.API_URL;} catch (error) {console.warn('Assumed to run locally.', error);}
-if (API_URL.startsWith("https://127.0.0.1:")) {API_URL = "https://shared-board-y6cp.onrender.com";}
+if (API_URL.startsWith("https://shared-board-client.onrender.com")) {API_URL = "https://shared-board-y6cp.onrender.com";}
 console.log(API_URL);
 
 async function fetchPostItNotes() {
