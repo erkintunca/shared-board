@@ -4,3 +4,6 @@ services:
     env: docker
     repo: https://github.com/erkintunca/shared-board
     dockerfilePath: ./Dockerfile
+    envVars:
+      - key: API_URL
+        value: https://shared-board-y6cp.onrender.com
