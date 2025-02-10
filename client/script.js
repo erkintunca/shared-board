@@ -1,6 +1,7 @@
 const board = document.getElementById('board');
 const addPostItButton = document.getElementById('add-post-it'); // Select the button element
 
+console.log(typeof(process));
 if (typeof(process) === 'undefined') {process = {}; process.env = {}; process.env.API_URL = 'http://localhost:3000';}  // For local testing
 
 async function fetchPostItNotes() {
