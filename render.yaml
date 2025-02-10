@@ -3,4 +3,4 @@ services:
     name: shared-board-db
     env: docker
     plan: free
-    dockerfilePath: ./server/Dockerfile
+    dockerfilePath: ./Dockerfile
