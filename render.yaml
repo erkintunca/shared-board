@@ -1,6 +1,6 @@
 services:
-  - type: pserv
-    name: mongodb
+  - type: web
+    name: shared-board-db
     env: docker
     plan: free
     dockerfilePath: ./server/Dockerfile

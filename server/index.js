@@ -10,6 +10,7 @@ app.use(cors());
 
 // Connect to MongoDB
 //mongoose.connect('mongodb://localhost:27017/shared-board', {
+//https://mongodb-ocus.onrender.com
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
