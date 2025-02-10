@@ -1,17 +1,15 @@
 const board = document.getElementById('board');
 const addPostItButton = document.getElementById('add-post-it'); // Select the button element
 
-const API_URL = '{{ API_URL }}';
+var API_URL = 'http://localhost:3000';
+try {API_URL = import.meta.env.API_URL;} catch (error) {console.warn('Assumed to run locally.', error);}
 console.log(API_URL);
-
-console.log(typeof(process));
-if (typeof(process) === 'undefined') {process = {}; process.env = {}; process.env.API_URL = 'http://localhost:3000';}  // For local testing
 
 async function fetchPostItNotes() {
   try {
     //const response = await fetch('http://localhost:3000/post-its'); // Fetch from your backend API
     //const response = await fetch('https://shared-board-y6cp.onrender.com/post-its'); // Fetch from your backend API
-    const response = await fetch(`${process.env.API_URL}/post-its`);
+    const response = await fetch(`${API_URL}/post-its`);
     const postItNotes = await response.json();
 
     const postItList = document.createElement('ul'); // Create an unordered list element
@@ -37,7 +35,7 @@ async function addPostIt() {
     };
 
     //const response = await fetch('https://shared-board-y6cp.onrender.com/post-its', { // Replace with your backend URL
-    const response = await fetch(`${process.env.API_URL}/post-its`, { // Replace with your backend URL
+    const response = await fetch(`${API_URL}/post-its`, { // Replace with your backend URL
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newPostIt),
