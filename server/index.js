@@ -8,18 +8,11 @@ const port = 3000; // You can change this port if needed
 // Enable CORS for all origins (for development purposes)
 //app.use(cors());
 // Enable CORS for your frontend's origin
-app.use(cors({
-    origin: 'https://shared-board-client.onrender.com',
-  }));
+app.use(cors({origin: 'https://shared-board-client.onrender.com',}));
 
 // Connect to MongoDB
 //mongoose.connect('mongodb://localhost:27017/shared-board', {
-//https://mongodb-ocus.onrender.com
-//erkintunca abg3kMQ8KliDMq49
-//mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/
 mongoose.connect('mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/shared-board', {
-//mongoose.connect('mongodb://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/', {
-//mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
