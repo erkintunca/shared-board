@@ -10,7 +10,7 @@ async function fetchPostItNotes() {
   try {
     //const response = await fetch('http://localhost:3000/post-its'); // Fetch from your backend API
     //const response = await fetch('https://shared-board-y6cp.onrender.com/post-its'); // Fetch from your backend API
-    const response = await fetch(`{{API_URL}}/post-its`);
+    const response = await fetch(`${{API_URL}}/post-its`);
     const postItNotes = await response.json();
 
     const postItList = document.createElement('ul'); // Create an unordered list element
