@@ -1,4 +1,5 @@
 const board = document.getElementById('board');
+const addPostItButton = document.getElementById('add-post-it'); // Select the button element
 
 async function fetchPostItNotes() {
   try {
@@ -20,4 +21,31 @@ async function fetchPostItNotes() {
   }
 }
 
+async function addPostIt() {
+  try {
+      const newPostIt = {
+      content: 'New post-it!', // Fixed content for now
+      positionX: 100,          // Fixed position
+      positionY: 100,
+    };
+
+    const response = await fetch('https://shared-board-y6cp.onrender.com/post-its', { // Replace with your backend URL
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newPostIt),
+    });
+
+    if (response.ok) {
+      // Refresh the post-it list after adding a new one
+      fetchPostItNotes();
+    } else {
+      console.error('Failed to add post-it:', response.status);
+    }
+  } catch (error) {
+    console.error('Error adding post-it:', error);
+  }
+}
+
+addPostItButton.addEventListener('click', addPostIt); // Add the event listener to the button
+  
 fetchPostItNotes(); // Fetch and display notes on page load
