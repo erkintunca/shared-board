@@ -1,16 +1,16 @@
 const board = document.getElementById('board');
 const addPostItButton = document.getElementById('add-post-it'); // Select the button element
-
+/*
 var API_URL = 'http://localhost:3000';
 //try {API_URL = import.meta.resolve("/");} catch (error) {console.warn('Assumed to run locally.', error);}
 try {API_URL = import.meta.env.API_URL;} catch (error) {console.warn('Assumed to run locally.', error);}
 console.log(API_URL);
-
+*/
 async function fetchPostItNotes() {
   try {
     //const response = await fetch('http://localhost:3000/post-its'); // Fetch from your backend API
     //const response = await fetch('https://shared-board-y6cp.onrender.com/post-its'); // Fetch from your backend API
-    const response = await fetch(`${API_URL}/post-its`);
+    const response = await fetch(`{{API_URL}}/post-its`);
     const postItNotes = await response.json();
 
     const postItList = document.createElement('ul'); // Create an unordered list element
