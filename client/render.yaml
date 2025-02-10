@@ -1,8 +1,6 @@
 services:
   - type: web
     name: shared-board-client
-    env: static
+    env: docker
     repo: https://github.com/erkintunca/shared-board
-    buildCommand: ""
-    startCommand: ""
-    publishPath: client
+    dockerfilePath: ./Dockerfile
