@@ -1,9 +1,11 @@
 services:
   - type: web
     name: shared-board-client
-    env: docker
+    env: node  # Use Node.js environment
     repo: https://github.com/erkintunca/shared-board
-    dockerfilePath: ./Dockerfile
+    buildCommand: npm run build  # Add build command
+    startCommand: npm run start  # Add start command
+    publishPath: dist  # Update publish path
     envVars:
-      - key: API_URL
+      - key: VITE_API_URL
         value: https://shared-board-y6cp.onrender.com
