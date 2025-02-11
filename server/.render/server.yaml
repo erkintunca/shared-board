@@ -7,4 +7,4 @@ services:
     startCommand: node index.js
     envVars:
       - key: MONGODB_URI
-        value: mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/
+        value: mongodb+srv://erkintunca:abg3kMQ8KliDMq49@cluster0.o96c4.mongodb.net/shared-board
