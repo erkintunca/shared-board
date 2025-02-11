@@ -3,7 +3,7 @@ services:
     name: shared-board-client
     env: node  # Use Node.js environment
     repo: https://github.com/erkintunca/shared-board
-    buildCommand: npm run build  # Add build command
+    buildCommand: npm ci  # Add build command
     startCommand: npm run start  # Add start command
     publishPath: dist  # Update publish path
     envVars:
