@@ -11,6 +11,7 @@ const port = 3000; // You can change this port if needed
 //app.use(cors());
 // Enable CORS for your frontend's origin
 //app.use(cors({origin: 'https://shared-board-client.onrender.com',}));
+console.log("CORS_ORIGIN: " + process.env.CORS_ORIGIN);
 app.use(cors({origin: process.env.CORS_ORIGIN,}));
 
 // Connect to MongoDB
