@@ -4,7 +4,7 @@ services:
     env: node  # Use Node.js environment
     repo: https://github.com/erkintunca/shared-board
     buildCommand: npm ci  # Add build command
-    startCommand: npm run start  # Add start command
+    startCommand: npm run dev  # Add start command
     publishPath: dist  # Update publish path
     envVars:
       - key: VITE_API_URL
